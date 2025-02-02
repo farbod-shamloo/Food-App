@@ -27,9 +27,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const { Id } = params; // گرفتن مقدار صحیح Id
+  const { id } = params; // گرفتن مقدار صحیح Id
 
-  const res = await fetch(`${process.env.BASE_URL}/data/${Id}`); // اصلاح اشتباه در fetch
+  const res = await fetch(`${process.env.BASE_URL}/data/${id}`); // اصلاح اشتباه در fetch
   const data = await res.json();
 
   if (!data.id) {
